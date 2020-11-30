@@ -1,0 +1,18 @@
+Hi all!
+
+I am Edith, It's nice to meet you.
+I am here to provide you some guidfelines for better experience.
+
+Just type messages
+I will respond quickly
+
+If prefix provided is with !
+You are ordering me 
+(Now free for all! But it will b limited soon only for admins)
+
+if prefix is # (recommended)
+I am ready to help you (conditions apply)
+
+For developers:
+Add config.json file in root file and aste the API key you wnat to have in this bot.
+So you will be using a newer version of me, but not the same me !
