@@ -6,55 +6,7 @@ const fs = require("fs");
 const { exit } = require("process");
 const prefix = "";
 
-function Month(num){
-    switch(num){
-        case 1: return "January";
-        case 2: return "February";
-        case 3: return "March";
-        case 4: return "April";
-        case 5: return "May";
-        case 6: return "Jun";
-        case 7: return "July";
-        case 8: return "Aug";
-        case 9: return "Sept";
-        case 10: return "Oct";
-        case 11: return "Nov";
-        case 12: return "Dec";
-        default: return "invalid";
-    }
-}
-
-function formatTime(hrs,min){
-    
-    let str="am";
-    if(hrs>=12){
-        str="PM";
-    }
-    else{
-        str="AM";
-    }
-    console.log(hrs);
-    return hrs+":"+min+" "+str;
-}
-
-function computeTime(flag){
-    const hrs = new Date().getHours();
-    console.log(hrs);
-    if(flag===0){       //only for good bye
-        if((hrs>=20 && hrs<=24) || (hrs>=0 && hrs<=4)){
-            return "good night";
-        }
-    }
-    else if(hrs>=5 && hrs<12){
-        return "good morning";
-    }
-    else if(hrs>=12 && hrs<16){
-        return "good afternoon";
-    }
-    else
-        return "good evening";
-    
-}
+const {month,formatTime,computeTime} = require("./build/datetime.js");
 
 client.on("ready", () => {
     console.log("I am Here!");
@@ -115,7 +67,7 @@ client.on("message", function(message) {
                 const year = new Date().getFullYear();
                 const hrs = new Date().getHours();
                 const mints = new Date().getMinutes();
-                message.channel.send(`It's ${date} ${Month(mon+1)},${year}, ${formatTime(hrs,mints)}`);
+                message.channel.send(`It's ${date} ${month(mon+1)},${year}, ${formatTime(hrs,mints)}`);
         }
 
         if(message.content.toLowerCase().includes("bye")){
