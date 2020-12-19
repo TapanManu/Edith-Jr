@@ -9,6 +9,11 @@
   "author": "Tapan Manu",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "google": "^2.1.0",
+    "ytdl-core": "^4.2.1"
   }
 }

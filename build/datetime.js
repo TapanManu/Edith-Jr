@@ -22,6 +22,9 @@ module.exports = {
             if((hrs>=20 && hrs<=24) || (hrs>=0 && hrs<=4)){
                 return "good night";
             }
+            else{
+                return "good bye";
+            }
         }
         else if(hrs>=5 && hrs<12){
             return "good morning";

@@ -5,8 +5,12 @@ const client = new Discord.Client();
 const fs = require("fs");
 const { exit } = require("process");
 const prefix = "";
+const songprefix = "#";
+
+const ytdl = require("ytdl-core");
 
 const {month,formatTime,computeTime} = require("./build/datetime.js");
+const {execute,skip,stop} = require("./streamer.js");
 
 client.on("ready", () => {
     console.log("I am Here!");
@@ -76,6 +80,22 @@ client.on("message", function(message) {
                 if(wish===0)
                     return;
         }
+
+        const serverQueue = queue.get(message.guild.id);
+
+        if (message.content.startsWith(`${songprefix}play`)) {
+            execute(message, serverQueue);
+            return;
+        } else if (message.content.startsWith(`${songprefix}skip`)) {
+            skip(message, serverQueue);
+            return;
+        } else if (message.content.startsWith(`${songprefix}stop`)) {
+            stop(message, serverQueue);
+            return;
+        } else {
+            message.channel.send("You need to enter a valid command!");
+        }
+        
     }
     catch(err){
         console.log(err);

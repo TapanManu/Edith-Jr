@@ -11,6 +11,7 @@ You are ordering me
 (Now free for all! But it will b limited soon only for admins)
 
 if prefix is # (recommended)
+Then I will play music for you 
 I am ready to help you (conditions apply)
 
 For developers:
