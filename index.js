@@ -10,7 +10,7 @@ const songprefix = "#";
 const ytdl = require("ytdl-core");
 
 const {month,formatTime,computeTime} = require("./build/datetime.js");
-const {execute,skip,stop} = require("./streamer.js");
+const {execute,skip,stop} = require("./build/streamer.js");
 
 client.on("ready", () => {
     console.log("I am Here!");
