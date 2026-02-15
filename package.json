@@ -14,7 +14,7 @@
     "ffmpeg": "0.0.4",
     "fluent-ffmpeg": "^2.1.2",
     "google": "^2.1.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "ytdl-core": "^4.2.1"
   }
 }
